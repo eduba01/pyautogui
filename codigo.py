@@ -20,9 +20,9 @@ pyautogui.write(link)
 
 pyautogui.press("enter")
 
-time.sleep(2)
+time.sleep(3)
 
-pyautogui.click(x=437, y=385)
+pyautogui.click(x=437, y=381)
 
 pyautogui.write("e-mail.com")
 
@@ -32,7 +32,26 @@ pyautogui.write("123456")
 
 pyautogui.press("tab")
 
-pyautogui.click
+pyautogui.press("enter")
+
+time.sleep(2)
+
+tabela = pandas.read_csv("./dados/produtos.csv")
+
+print(tabela)
+
+for linha in tabela.index:
+    pyautogui.click(x=536, y=250)
+    
+    codigo = tabela.loc[linha, "codigo"]
+    pyautogui.write(codigo)
+    pyautogui.press("tab")
+
+    marca = tabela.loc[linha, "marca"]
+    pyautogui.write(marca)
+    pyautogui.press("tab")
+
+
 
 
 
